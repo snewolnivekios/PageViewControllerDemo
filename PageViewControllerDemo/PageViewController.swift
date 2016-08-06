@@ -45,8 +45,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
     // Configure page indicator dot colors
     let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: [PageViewController.self])
-    pageControl.pageIndicatorTintColor = UIColor.lightGray
-    pageControl.currentPageIndicatorTintColor = UIColor.black
+    pageControl.pageIndicatorTintColor = .lightGray
+    pageControl.currentPageIndicatorTintColor = .black
   }
 
 
