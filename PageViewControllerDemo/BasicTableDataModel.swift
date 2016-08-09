@@ -1,5 +1,5 @@
 //
-//  LatinTableDataModel.swift
+//  BasicTableDataModel.swift
 //  PageViewControllerDemo
 //
 //  Copyright © 2016 Kevin L. Owens. All rights reserved.
@@ -17,6 +17,7 @@
 //  You should have received a copy of the GNU General Public License
 //  along with PageViewControllerDemo.  If not, see <http://www.gnu.org/licenses/>.
 //
+
 
 /// Conforming types provide data needed to populate a table view with basic data.
 protocol BasicTableDataModel {

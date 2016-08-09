@@ -20,6 +20,7 @@
 
 import UIKit
 
+
 /// The app's main view controller that encapsulates the segmented control used to switch contexts between the controller's two embedded container viwes.
 class MainViewController: UIViewController {
 
@@ -33,19 +34,25 @@ class MainViewController: UIViewController {
   /// Configures the visibility of the two container views in accordance with the initial segment control state.
   override func viewDidLoad() {
     super.viewDidLoad()
-    unpagedContainerView.isHidden = true
+    unpagedContainerView.alpha = 0.0
   }
 
 
   /// Updates the visibility of the two container views in accordance with the new segment control state.
   @IBAction func changedViews(_ sender: UISegmentedControl) {
+
+    func setViewAlphas(_ a: CGFloat, _ b: CGFloat) {
+      UIView.animate(withDuration: 0.25) {
+        self.pagedContainerView.alpha = a
+        self.unpagedContainerView.alpha = b
+      }
+    }
+
     switch sender.selectedSegmentIndex {
     case 0:
-      pagedContainerView.isHidden = false
-      unpagedContainerView.isHidden = true
+      setViewAlphas(1.0, 0.0)
     case 1:
-      pagedContainerView.isHidden = true
-      unpagedContainerView.isHidden = false
+      setViewAlphas(0.0, 1.0)
     default:
       break
     }

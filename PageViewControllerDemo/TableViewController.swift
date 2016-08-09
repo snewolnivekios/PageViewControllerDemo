@@ -20,6 +20,7 @@
 
 import UIKit
 
+
 /// A table view controller that presents sections of `BasicTableDataModel` data for both paginated and non-paginated views.
 ///
 /// If `section` is `nil`, the entirety of the data model is displayed in a single view. If non-`nil`, only the data for that `section` is displayed.
