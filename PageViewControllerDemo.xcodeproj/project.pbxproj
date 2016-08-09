@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DCC7F00E1D563E2200DB0DC2 /* TabularDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */; };
+		DC12C3FB1D59DCBE00E22F85 /* NumericTableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12C3FA1D59DCBE00E22F85 /* NumericTableDataModel.swift */; };
+		DC14D2411D59DC2800983D69 /* LatinTableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14D2401D59DC2800983D69 /* LatinTableDataModel.swift */; };
+		DCC7F00E1D563E2200DB0DC2 /* BasicTableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00A1D563E2200DB0DC2 /* BasicTableDataModel.swift */; };
 		DCC7F00F1D563E2200DB0DC2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCC7F00B1D563E2200DB0DC2 /* LICENSE.txt */; };
 		DCC7F0101D563E2200DB0DC2 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */; };
 		DCC7F0111D563E2200DB0DC2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */; };
@@ -19,7 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataModel.swift; sourceTree = "<group>"; };
+		DC12C3FA1D59DCBE00E22F85 /* NumericTableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumericTableDataModel.swift; sourceTree = "<group>"; };
+		DC14D2401D59DC2800983D69 /* LatinTableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatinTableDataModel.swift; sourceTree = "<group>"; };
+		DCC7F00A1D563E2200DB0DC2 /* BasicTableDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableDataModel.swift; sourceTree = "<group>"; };
 		DCC7F00B1D563E2200DB0DC2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +71,9 @@
 				DCF823131D563D5C00A6523D /* MainViewController.swift */,
 				DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */,
 				DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */,
-				DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */,
+				DCC7F00A1D563E2200DB0DC2 /* BasicTableDataModel.swift */,
+				DC14D2401D59DC2800983D69 /* LatinTableDataModel.swift */,
+				DC12C3FA1D59DCBE00E22F85 /* NumericTableDataModel.swift */,
 				DCF823181D563D5C00A6523D /* Assets.xcassets */,
 				DCF8231A1D563D5C00A6523D /* LaunchScreen.storyboard */,
 				DCF8231D1D563D5C00A6523D /* Info.plist */,
@@ -151,10 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF823141D563D5C00A6523D /* MainViewController.swift in Sources */,
+				DC14D2411D59DC2800983D69 /* LatinTableDataModel.swift in Sources */,
 				DCF823121D563D5C00A6523D /* AppDelegate.swift in Sources */,
-				DCC7F00E1D563E2200DB0DC2 /* TabularDataModel.swift in Sources */,
+				DCC7F00E1D563E2200DB0DC2 /* BasicTableDataModel.swift in Sources */,
 				DCC7F0111D563E2200DB0DC2 /* TableViewController.swift in Sources */,
 				DCC7F0101D563E2200DB0DC2 /* PageViewController.swift in Sources */,
+				DC12C3FB1D59DCBE00E22F85 /* NumericTableDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

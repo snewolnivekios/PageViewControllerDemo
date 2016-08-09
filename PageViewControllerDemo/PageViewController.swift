@@ -27,10 +27,10 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
   let viewControllerIdentifier = "TableViewController"
 
   /// The number of pages being presented.
-  let pageCount = TabularDataModel().numElements
+  let pageCount = LatinTableDataModel().numSections
 
   /// The source of the tabular data.
-  var model: TabularDataModel!
+  var model: LatinTableDataModel!
 
 
   /// Configures self as the data source, and installs the page indicator and first-presented view controller.
@@ -55,7 +55,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
 
   /// Returns a new `TableViewController` configured with the given `model` and `section`.
-  func newTableViewController(forSection section: Int, of model: TabularDataModel) -> TableViewController {
+  func newTableViewController(forSection section: Int, of model: LatinTableDataModel) -> TableViewController {
     let newTVC = storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifier) as! TableViewController
     newTVC.model = model
     newTVC.section = section

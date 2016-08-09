@@ -56,9 +56,9 @@ class MainViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
     switch segue.destination {
     case let pvc as PageViewController:
-      pvc.model = TabularDataModel()
+      pvc.model = LatinTableDataModel()
     case let tvc as TableViewController:
-      tvc.model = TabularDataModel()
+      tvc.model = NumericTableDataModel()
     default:
       break
     }
