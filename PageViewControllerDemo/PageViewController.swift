@@ -21,7 +21,7 @@
 import UIKit
 
 /// The page view controller and data source that configures and manages the presentation of paginated view controllers.
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource, TabularDataModelContainer {
+class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
   /// The storyboard identifier for the view controller being paginated.
   let viewControllerIdentifier = "TableViewController"
@@ -30,11 +30,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
   let pageCount = TabularDataModel().numElements
 
   /// The source of the tabular data.
-  var model: TabularDataModel {
-    get { return _model }
-    set { _model = newValue }
-  }
-  private var _model: TabularDataModel!
+  var model: TabularDataModel!
 
 
   /// Configures self as the data source, and installs the page indicator and first-presented view controller.
