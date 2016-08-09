@@ -1,5 +1,5 @@
 //
-//  DataModel.swift
+//  TabularDataModel.swift
 //  PageViewControllerDemo
 //
 //  Copyright © 2016 Kevin L. Owens. All rights reserved.
@@ -18,8 +18,8 @@
 //  along with PageViewControllerDemo.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-/// A data source that provides tabulated textual data.
-struct DataModel {
+/// A data source that satisfies the `UITableViewDataSource` protocol for providing tabulated textual data.
+struct TabularDataModel {
 
   /// A collection of textual elements composed of a variable number of words that follow an initial "title" word.
   let data = [

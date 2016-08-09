@@ -21,13 +21,20 @@
 import UIKit
 
 /// The page view controller and data source that configures and manages the presentation of paginated view controllers.
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class PageViewController: UIPageViewController, UIPageViewControllerDataSource, TabularDataModelContainer {
 
   /// The storyboard identifier for the view controller being paginated.
   let viewControllerIdentifier = "TableViewController"
 
   /// The number of pages being presented.
-  let pageCount = DataModel().numElements
+  let pageCount = TabularDataModel().numElements
+
+  /// The source of the tabular data.
+  var model: TabularDataModel {
+    get { return _model }
+    set { _model = newValue }
+  }
+  private var _model: TabularDataModel!
 
 
   /// Configures self as the data source, and installs the page indicator and first-presented view controller.
@@ -41,6 +48,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     // Install the first-presented view controller
     let tvc = storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifier) as! TableViewController
     tvc.section = 0
+    tvc.model = model
     setViewControllers([tvc], direction: .forward, animated: true, completion: nil)
 
     // Configure page indicator dot colors
@@ -50,39 +58,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
   }
 
 
-  // MARK: - Page View Controller Data Source
-
-  /// Returns the _next_ view controller, or `nil` if there is no such controller.
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-
-    let tvc = viewController as! TableViewController
-    if tvc.section < pageCount - 1 {
-      let newTVC = storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifier) as! TableViewController
-      newTVC.section = tvc.section! + 1
-      return newTVC
-    }
-
-    return nil
-  }
-
-
-  /// Returns the _previous_ view controller, or `nil` if there is no such controller.
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-
-    let tvc = viewController as! TableViewController
-    if tvc.section > 0 {
-      let newTVC = storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifier) as! TableViewController
-      newTVC.section = tvc.section! - 1
-      return newTVC
-    }
-    
-    return nil
-  }
-
-
-  /// Returns the number of pages to represent in the `UIPageControl` page indicator.
-  func presentationCount(for pageViewController: UIPageViewController) -> Int {
-    return pageCount
+  /// Returns a new `TableViewController` configured with the given `model` and `section`.
+  func newTableViewController(forSection section: Int, of model: TabularDataModel) -> TableViewController {
+    let newTVC = storyboard?.instantiateViewController(withIdentifier: viewControllerIdentifier) as! TableViewController
+    newTVC.model = model
+    newTVC.section = section
+    return newTVC
   }
 
 
@@ -92,5 +73,27 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
       return (viewControllers[0] as! TableViewController).section!
     }
     return 0
+  }
+
+
+  // MARK: - Page View Controller Data Source
+
+  /// Returns the _next_ view controller, or `nil` if there is no such controller.
+  func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    let tvc = viewController as! TableViewController
+    return tvc.section < pageCount - 1 ? newTableViewController(forSection: tvc.section! + 1, of: model) : nil
+  }
+
+
+  /// Returns the _previous_ view controller, or `nil` if there is no such controller.
+  func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    let tvc = viewController as! TableViewController
+    return tvc.section > 0 ? newTableViewController(forSection: tvc.section! - 1, of: model) : nil
+  }
+
+
+  /// Returns the number of pages to represent in the `UIPageControl` page indicator.
+  func presentationCount(for pageViewController: UIPageViewController) -> Int {
+    return pageCount
   }
 }

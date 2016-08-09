@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DCC7F00E1D563E2200DB0DC2 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00A1D563E2200DB0DC2 /* DataModel.swift */; };
+		DCC7F00E1D563E2200DB0DC2 /* TabularDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */; };
 		DCC7F00F1D563E2200DB0DC2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DCC7F00B1D563E2200DB0DC2 /* LICENSE.txt */; };
 		DCC7F0101D563E2200DB0DC2 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */; };
 		DCC7F0111D563E2200DB0DC2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DCC7F00A1D563E2200DB0DC2 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabularDataModel.swift; sourceTree = "<group>"; };
 		DCC7F00B1D563E2200DB0DC2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				DCF823131D563D5C00A6523D /* MainViewController.swift */,
 				DCC7F00C1D563E2200DB0DC2 /* PageViewController.swift */,
 				DCC7F00D1D563E2200DB0DC2 /* TableViewController.swift */,
-				DCC7F00A1D563E2200DB0DC2 /* DataModel.swift */,
+				DCC7F00A1D563E2200DB0DC2 /* TabularDataModel.swift */,
 				DCF823181D563D5C00A6523D /* Assets.xcassets */,
 				DCF8231A1D563D5C00A6523D /* LaunchScreen.storyboard */,
 				DCF8231D1D563D5C00A6523D /* Info.plist */,
@@ -152,7 +152,7 @@
 			files = (
 				DCF823141D563D5C00A6523D /* MainViewController.swift in Sources */,
 				DCF823121D563D5C00A6523D /* AppDelegate.swift in Sources */,
-				DCC7F00E1D563E2200DB0DC2 /* DataModel.swift in Sources */,
+				DCC7F00E1D563E2200DB0DC2 /* TabularDataModel.swift in Sources */,
 				DCC7F0111D563E2200DB0DC2 /* TableViewController.swift in Sources */,
 				DCC7F0101D563E2200DB0DC2 /* PageViewController.swift in Sources */,
 			);

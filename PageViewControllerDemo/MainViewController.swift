@@ -20,8 +20,19 @@
 
 import UIKit
 
+/// A conforming type accepts assignment of a `TabularDataModel` property.
+protocol TabularDataModelContainer {
+
+  /// Provides data needed to satisfy the `UITableViewDataSource` protocol.
+  var model: TabularDataModel { get set }
+}
+
+
 /// The app's main view controller that encapsulates the segmented control used to switch contexts between the controller's two embedded container viwes.
 class MainViewController: UIViewController {
+
+  /// The source of the tabular data to push down to the container views.
+  let model = TabularDataModel()
 
   /// Embeds the paged table view controller used for paginated presentation of its sectioned data.
   @IBOutlet weak var pagedContainerView: UIView!
@@ -48,6 +59,14 @@ class MainViewController: UIViewController {
       unpagedContainerView.isHidden = false
     default:
       break
+    }
+  }
+
+
+  /// Hands the data model off to the embed-segue container views.
+  override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    if var dmc = segue.destination as? TabularDataModelContainer {
+      dmc.model = model
     }
   }
 }
