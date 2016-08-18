@@ -78,14 +78,14 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
   /// Returns the _next_ view controller, or `nil` if there is no such controller.
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
     let tvc = viewController as! TableViewController
-    return tvc.section < pageCount - 1 ? newTableViewController(forSection: tvc.section! + 1, of: model) : nil
+    return tvc.section! < pageCount - 1 ? newTableViewController(forSection: tvc.section! + 1, of: model) : nil
   }
 
 
   /// Returns the _previous_ view controller, or `nil` if there is no such controller.
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
     let tvc = viewController as! TableViewController
-    return tvc.section > 0 ? newTableViewController(forSection: tvc.section! - 1, of: model) : nil
+    return tvc.section! > 0 ? newTableViewController(forSection: tvc.section! - 1, of: model) : nil
   }
 
 

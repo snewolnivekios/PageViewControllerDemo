@@ -60,7 +60,7 @@ class MainViewController: UIViewController {
 
 
   /// Hands a tailored data model off to the embed-segue container views.
-  override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segue.destination {
     case let pvc as PageViewController:
       pvc.model = LatinTableDataModel()
