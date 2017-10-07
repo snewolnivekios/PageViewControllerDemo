@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PageViewControllerDemo
 //
-//  Copyright © 2016 Kevin L. Owens. All rights reserved.
+//  Copyright © 2017 Kevin L. Owens. All rights reserved.
 //
 //  PageViewControllerDemo is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+  private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     return true
   }

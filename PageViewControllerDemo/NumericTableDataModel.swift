@@ -2,7 +2,7 @@
 //  NumericTableDataModel.swift
 //  PageViewControllerDemo
 //
-//  Copyright © 2016 Kevin L. Owens. All rights reserved.
+//  Copyright © 2017 Kevin L. Owens. All rights reserved.
 //
 //  PageViewControllerDemo is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -49,10 +49,10 @@ struct NumericTableDataModel: BasicTableDataModel {
   }
 
 
-  /// Returns the number of characters in the `item`-indexed word within the requested `section`.
+  /// Returns a description of the number of characters in the `item`-indexed word within the requested `section` of `textModel`; e.g., "Three" or "Fifteen". If the item length exceeds 15 characters, returns `nil`.
   func text(forSection section: Int, item: Int) -> String? {
-    if let count = textModel.text(forSection: section, item: item)?.characters.count, count <= numberText.count {
-      return numberText[count]
+    if let itemLength = textModel.text(forSection: section, item: item)?.characters.count, itemLength <= numberText.count {
+      return numberText[itemLength]
     }
     return nil
   }

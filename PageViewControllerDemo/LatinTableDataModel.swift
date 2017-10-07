@@ -2,7 +2,7 @@
 //  LatinTableDataModel.swift
 //  PageViewControllerDemo
 //
-//  Copyright © 2016 Kevin L. Owens. All rights reserved.
+//  Copyright © 2017 Kevin L. Owens. All rights reserved.
 //
 //  PageViewControllerDemo is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
