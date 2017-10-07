@@ -62,6 +62,12 @@ class TableViewController: UITableViewController {
     cell.titleLabel.text = model.text(forSection: section, item: indexPath.row)
     return cell
   }
+
+  /// Stub for responding to user row selection.
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell = tableView.cellForRow(at: indexPath) as! BasicCell
+    print("\(#function): indexPath = \(indexPath); value = \(cell.titleLabel.text!)")
+  }
 }
 
 // MARK: -
